@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/customer-profile-styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Driver Profile</title>
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="header-top">
+            <div class="header-logo">Ohm Cooperations | Hello, Driver.</div>
+            <ul>
+                <li><a href="driver-tracker.php">Delivery</a></li>
+                <li><a href="driver-profile.html">Profile</a></li>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="profile-wrapper">
+        <div class="profile-header">
+            <h1>Driver Profile</h1>
+        </div>
+        <div class="profile-content">
+            <div class="profile-section">
+                <h2>Basic Information</h2>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="driver-name">John Doe</span></p>
+                    <p><strong>Email:</strong> <span id="driver-email">john.doe@example.com</span></p>
+                    <p><strong>Phone:</strong> <span id="driver-phone">123-456-7890</span></p>
+                </div>
+                <button onclick="toggleEdit('basic-info')">Edit</button>
+                <div id="basic-info-edit" class="edit-section" style="display: none;">
+                    <form id="basic-info-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="John Doe">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" value="123-456-7890">
+                        <button type="submit">Save</button>
+                        <button type="button" onclick="toggleEdit('basic-info')">Cancel</button>
+                    </form>
+                </div>
+            </div>
+            <div class="profile-section">
+                <h2>Shipping Address</h2>
+                <div class="profile-info">
+                    <p><strong>Street:</strong> <span id="driver-street">123 Main St</span></p>
+                    <p><strong>City:</strong> <span id="driver-city">Anytown</span></p>
+                    <p><strong>State:</strong> <span id="driver-state">CA</span></p>
+                    <p><strong>Zip Code:</strong> <span id="driver-zip">12345</span></p>
+                </div>
+                <button onclick="toggleEdit('address')">Edit</button>
+                <div id="address-edit" class="edit-section" style="display: none;">
+                    <form id="address-form">
+                        <label for="street">Street:</label>
+                        <input type="text" id="street" name="street" value="123 Main St">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" value="Anytown">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state" value="CA">
+                        <label for="zip">Zip Code:</label>
+                        <input type="text" id="zip" name="zip" value="12345">
+                        <button type="submit">Save</button>
+                        <button type="button" onclick="toggleEdit('address')">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Ohm Ordering System. All rights reserved.</p>
+    </div>
+
+    <script>
+        function toggleEdit(section) {
+            const editSection = document.getElementById(`${section}-edit`);
+            if (editSection.style.display === "none") {
+                editSection.style.display = "block";
+            } else {
+                editSection.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
