@@ -171,10 +171,10 @@
                 <thead>
                     <tr>
                         <th>Parcel ID</th>
-                        <th>Date Received</th>
+                        <th>Shipping Out Date</th>
                         <th>Parcel Status</th>
-                        <th>Student ID</th>
-                        <th>Student Name</th>
+                        <th>Customer ID</th>
+                        <th>Customer Name</th>
                     </tr>
                 </thead>
                 <tbody id="parcelTableBody">
